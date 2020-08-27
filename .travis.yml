@@ -14,6 +14,7 @@ install:
   - npm install -D
   - cd ./test/smoke/template
   - npm install -D
+  - cd ../../
 # script执行脚本 执行测试
 scripts:
   - npm test
