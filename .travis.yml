@@ -1,0 +1,19 @@
+#使用的语言是node.js
+language: node_js
+#是否使用sudo命令
+sudo: false
+# 缓存 是否使用缓存 缓存的文件夹 
+cache:
+  apt: true
+  directories:
+    - node_modules
+# node_js使用的版本
+node_js: stable
+# 安装的依赖
+install:
+  - npm install -D
+  - cd ./test/smoke/template
+  - npm install -D
+# script执行脚本 执行测试
+scripts:
+  - npm test
